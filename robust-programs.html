@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robust Programs - OCR GCSE Computer Science (J277)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">J277 Revision</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="programming-fundamentals.html">Programming Fundamentals</a></li>
+                <li><a href="robust-programs.html">Robust Programs</a></li>
+                <li><a href="boolean-logic.html">Boolean Logic</a></li>
+                <li><a href="languages-ides.html">Languages & IDEs</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-section container">
+        <h2 class="animate-on-scroll">2.3 Producing Robust Programs</h2>
+
+        <div class="definition-box animate-on-scroll">
+            <p>Here you will revise the following:</p>
+            <ul>
+                <li>Defensive Design (Validation, Authentication)</li>
+                <li>Testing (Types of testing, Test plans)</li>
+                <li>Maintainability (Comments, Indentation)</li>
+            </ul>
+        </div>
+
+        <h3 class="animate-on-scroll">Defensive Design</h3>
+        <p class="animate-on-scroll">Defensive design is about writing code that anticipates potential errors or misuse and handles them gracefully, making the program more <span class="red-term">robust</span>.</p>
+        <img src="images/robust-programs-overview.png" alt="Image representing Robust Programs" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Validation</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Validation:</strong> Checking if data meets certain criteria before it is processed.</p>
+        </div>
+        <p class="animate-on-scroll">This prevents incorrect or malicious data from causing errors.</p>
+        <p class="animate-on-scroll">Types of validation checks:</p>
+        <ul>
+            <li class="animate-on-scroll"><span class="red-term">Presence Check</span>: Ensures data has been entered.</li>
+            <li class="animate-on-scroll"><span class="red-term">Length Check</span>: Checks if data is the correct number of characters.</li>
+            <li class="animate-on-scroll"><span class="red-term">Range Check</span>: Checks if data is within a specified numerical range.</li>
+            <li class="animate-on-scroll"><span class="red-term">Type Check</span>: Checks if data is of the correct data type (e.g., integer, string).</li>
+            <li class="animate-on-scroll"><span class="red-term">Format Check</span>: Checks if data matches a specific pattern (e.g., postcode format).</li>
+            <li class="animate-on-scroll"><span class="red-term">Look-up Table</span>: Checks if data exists in a predefined list of valid entries.</li>
+        </ul>
+        <img src="images/validation-example.png" alt="Image showing Data Validation" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Authentication</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>Authentication:</strong> Verifying the identity of a user or system.</p>
+        </div>
+        <p class="animate-on-scroll">This is commonly done using usernames and passwords to ensure only authorised users can access a program or data.</p>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-lock"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>A program asks the user to enter their age. What type of validation check would be most appropriate to ensure the age entered is reasonable (e.g., between 0 and 120)? Explain why.</p>
+            </div>
+        </div>
+
+        <h3 class="animate-on-scroll">Testing</h3>
+        <p class="animate-on-scroll">Testing is crucial to find and fix errors (<span class="red-term">bugs</span>) in a program.</p>
+
+        <h4 class="animate-on-scroll">Types of Testing</h4>
+        <ul>
+            <li class="animate-on-scroll"><span class="red-term">Syntax Errors</span>: Errors that break the rules of the programming language (e.g., misspelling a command). The program won't run.</li>
+            <li class="animate-on-scroll"><span class="red-term">Logic Errors</span>: Errors where the program runs but does not do what it is intended to do (e.g., using `+` instead of `-`).</li>
+            <li class="animate-on-scroll"><span class="red-term">Runtime Errors</span>: Errors that occur while the program is running (e.g., dividing by zero).</li>
+        </ul>
+        <img src="images/testing-types.png" alt="Diagram or icons for different testing types" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Test Plans</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Test Plan:</strong> A document outlining the tests that will be conducted on a program.</p>
+        </div>
+        <p class="animate-on-scroll">A good test plan includes:</p>
+        <ul>
+            <li class="animate-on-scroll">Test cases (inputs).</li>
+            <li class="animate-on-scroll">Expected outputs for each test case.</li>
+            <li class="animate-on-scroll">Actual outputs.</li>
+            <li class="animate-on-scroll">Whether the test passed or failed.</li>
+            <li class="animate-on-scroll">Notes on any bugs found.</li>
+        </ul>
+        <p class="animate-on-scroll">Test data should include:</p>
+        <ul>
+            <li class="animate-on-scroll"><span class="red-term">Normal Data</span>: Typical, valid data.</li>
+            <li class="animate-on-scroll"><span class="red-term">Boundary Data</span>: Data at the limits of acceptable ranges.</li>
+            <li class="animate-on-scroll"><span class="red-term">Erroneous Data</span>: Invalid or incorrect data.</li>
+        </ul>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-bug"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Give an example of a runtime error and explain why it would cause a program to crash.</p>
+            </div>
+        </div>
+
+
+        <h3 class="animate-on-scroll">Maintainability</h3>
+        <p class="animate-on-scroll">Maintainability refers to how easy it is to modify, understand, and debug code in the future.</p>
+        <img src="images/maintainability-example.png" alt="Image related to code comments/structure" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Comments</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Comments:</strong> Explanations added to the code that are ignored by the computer but help humans understand what the code does.</p>
+        </div>
+        <p class="animate-on-scroll">Good comments explain the *why* and *how* of complex code sections, not just the *what*.</p>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            // This function calculates the area of a circle
+            FUNCTION CalculateCircleArea(radius)
+                // Area = pi * radius^2
+                SET area = 3.14159 * radius * radius
+                RETURN area
+            END FUNCTION
+            </pre>
+        </div>
+
+        <h4 class="animate-on-scroll">Indentation</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Indentation:</strong> Using spaces or tabs to structure code visually, showing blocks of code that belong together (e.g., inside loops or IF statements).</p>
+        </div>
+        <p class="animate-on-scroll">Proper indentation makes code much easier to read and understand.</p>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            IF score >= 50 THEN
+                DISPLAY "Pass"
+            ELSE
+                DISPLAY "Fail"
+            END IF // Clearly shows which lines are inside the IF/ELSE
+            </pre>
+        </div>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-book-open"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Explain two ways that writing maintainable code helps other programmers (or yourself in the future) understand a program.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 J277 Revision Guide. All rights reserved.</p>
+            <p>Inspired by <a href="https://www.csnewbs.com/ocr-gcse" target="_blank">CSNewbs</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -21,32 +21,32 @@ document.addEventListener('DOMContentLoaded', () => {
         burger.classList.toggle('toggle');
     });
 
-    // Fade-in animation for initial load elements
+    // Fade-in animation for initial load elements (Hero section)
     const heroContent = document.querySelector('.hero-content');
     const revisionCharacter = document.querySelector('.revision-guide-character');
+
+    // Only apply initial opacity and animation if the elements exist (i.e., on index.html)
+    // The initial opacity: 0 is now set in CSS for these specific elements
     if (heroContent) {
-        heroContent.style.opacity = 0;
-        heroContent.style.transform = 'translateY(20px)';
         setTimeout(() => {
             heroContent.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
             heroContent.style.opacity = 1;
-            heroContent.style.transform = 'translateY(0)';
+            heroContent.style.transform = 'translateY(0)'; // Animate transform as well
         }, 100); // Small delay to ensure CSS is applied before animation
-
-        if (revisionCharacter) {
-            revisionCharacter.style.opacity = 0;
-            revisionCharacter.style.transform = 'translateX(50px)';
-            setTimeout(() => {
-                revisionCharacter.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
-                revisionCharacter.style.opacity = 1;
-                revisionCharacter.style.transform = 'translateX(0)';
-            }, 300); // Slightly delayed
-        }
     }
+
+    if (revisionCharacter) {
+         setTimeout(() => {
+             revisionCharacter.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+             revisionCharacter.style.opacity = 1;
+             revisionCharacter.style.transform = 'translateX(0)'; // Animate transform as well
+         }, 300); // Slightly delayed
+     }
 
 
     // Intersection Observer for scroll animations
-    const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll, .section-title, .overview-item');
+    // Select elements that should animate on scroll, excluding the hero section elements handled above
+    const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll:not(.hero-content):not(.revision-guide-character)');
 
     const observerOptions = {
         root: null, // viewport
@@ -57,38 +57,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                if (entry.target.classList.contains('section-title') || entry.target.classList.contains('hero-content')) {
-                    entry.target.classList.add('fade-in-up');
-                } else if (entry.target.classList.contains('overview-item')) {
-                    // Specific animations for overview items based on their position
-                    if (entry.target.classList.contains('slide-in-left')) {
-                        entry.target.style.animation = `slideInLeft 0.8s ease-out forwards ${entry.target.classList.contains('delay-1') ? '0.2s' : ''} ${entry.target.classList.contains('delay-2') ? '0.4s' : ''}`;
-                    } else if (entry.target.classList.contains('slide-in-up')) {
-                         entry.target.style.animation = `slideInUp 0.8s ease-out forwards ${entry.target.classList.contains('delay-1') ? '0.2s' : ''} ${entry.target.classList.contains('delay-2') ? '0.4s' : ''}`;
-                    } else if (entry.target.classList.contains('slide-in-right')) {
-                         entry.target.style.animation = `slideInRight 0.8s ease-out forwards ${entry.target.classList.contains('delay-1') ? '0.2s' : ''} ${entry.target.classList.contains('delay-2') ? '0.4s' : ''}`;
-                    }
-                } else {
-                    entry.target.classList.add('is-visible');
-                }
+                // Add the 'is-visible' class to trigger the animation defined in CSS
+                entry.target.classList.add('is-visible');
                 observer.unobserve(entry.target); // Stop observing once animated
             }
         });
     }, observerOptions);
 
+    // Observe each element selected for scroll animation
     animateOnScrollElements.forEach(el => {
         observer.observe(el);
     });
+
+    // --- Debugging Tip ---
+    // If animations or elements are not appearing as expected,
+    // open your browser's Developer Tools (usually F12), go to the 'Console' tab,
+    // and look for any red error messages. These messages can help identify
+    // issues in the JavaScript code or file loading.
 });
 
-// Animation for mobile nav links
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
-}
+// Animation for mobile nav links (CSS animation, not JS)
+// @keyframes navLinkFade { ... } // This animation is defined in style.css

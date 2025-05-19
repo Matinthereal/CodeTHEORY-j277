@@ -193,6 +193,7 @@ body {
     margin-right: 15px;
     flex-shrink: 0;
     border: 3px solid var(--primary-color);
+    /* Initial animation for character */
     animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
@@ -343,26 +344,14 @@ body {
     100% { transform: scale(1); }
 }
 
-.fade-in { animation: fadeIn 1s ease-out forwards; }
-.fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-.fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-.fade-in-right { animation: fadeInRight 1s ease-out forwards; }
-.fade-in-left { animation: fadeInLeft 1s ease-out forwards; }
-
-.slide-in-left { animation: slideInLeft 0.8s ease-out forwards; opacity: 0; }
-.slide-in-right { animation: slideInRight 0.8s ease-out forwards; opacity: 0; }
-.slide-in-up { animation: slideInUp 0.8s ease-out forwards; opacity: 0; }
-
-/* Add delays for staggered animations */
-.delay-1 { animation-delay: 0.2s; }
-.delay-2 { animation-delay: 0.4s; }
-.delay-3 { animation-delay: 0.6s; }
-.delay-4 { animation-delay: 0.8s; }
-
-/* Initial states for JS animations */
+/*
+   Removed initial opacity: 0 from animate-on-scroll
+   to ensure text is visible even if JS doesn't run.
+   The JS will still apply the animation if it works.
+*/
 .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
+    /* opacity: 0;  <-- Removed */
+    transform: translateY(20px); /* Still start slightly lower */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -370,6 +359,16 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Apply initial opacity: 0 only to elements that are animated on initial load */
+.hero-content.fade-in {
+    opacity: 0; /* Keep initial opacity for hero content fade-in */
+}
+
+.revision-guide-character.fade-in-right {
+     opacity: 0; /* Keep initial opacity for character fade-in */
+}
+
 
 /* Animated button effect */
 .animated-button {

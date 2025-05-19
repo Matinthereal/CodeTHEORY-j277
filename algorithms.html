@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithms - OCR GCSE Computer Science (J277)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">J277 Revision</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="programming-fundamentals.html">Programming Fundamentals</a></li>
+                <li><a href="robust-programs.html">Robust Programs</a></li>
+                <li><a href="boolean-logic.html">Boolean Logic</a></li>
+                <li><a href="languages-ides.html">Languages & IDEs</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-section container">
+        <h2 class="animate-on-scroll">2.1 Algorithms</h2>
+
+        <div class="definition-box animate-on-scroll">
+            <p>Here you will revise the following:</p>
+            <ul>
+                <li><strong>2.1.1 Computational Thinking</strong></li>
+                <li>Principles of computational thinking:
+                    <ul>
+                        <li><span class="red-term">Abstraction</span></li>
+                        <li><span class="red-term">Decomposition</span></li>
+                        <li><span class="red-term">Algorithmic Thinking</span></li>
+                    </ul>
+                </li>
+                <li><strong>2.1.2 Designing, Creating and Refining Algorithms</strong></li>
+                <li>Identify the inputs, processes, and outputs for a problem</li>
+                <li>Structure diagrams</li>
+                <li>Create, interpret, correct, complete, and refine algorithms using:
+                    <ul>
+                        <li><span class="red-term">Pseudocode</span></li>
+                        <li><span class="red-term">Flowcharts</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <h3 class="animate-on-scroll">2.1.1 Computational Thinking</h3>
+        <p class="animate-on-scroll">Computational thinking is a set of problem-solving methods that involve expressing problems and their solutions in a way that a computer could execute.</p>
+
+        <h4 class="animate-on-scroll">Abstraction</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Abstraction:</strong> Reducing complexity by removing unnecessary details to focus on the essential information.</p>
+        </div>
+        <p class="animate-on-scroll">When you <span class="red-term">abstract</span> a problem, you are essentially creating a simplified model. For example, when creating a map for navigation, you don't need to show every single tree or house; you only need roads, landmarks, and route information.</p>
+        <img src="images/abstraction-example.png" alt="Example of Abstraction - Map" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Decomposition</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Decomposition:</strong> Breaking down a complex problem into smaller, more manageable sub-problems.</p>
+        </div>
+        <p class="animate-on-scroll">This makes a large problem easier to understand and solve. Each sub-problem can then be tackled individually. For instance, building a house can be decomposed into building the foundation, walls, roof, plumbing, electrics, etc.</p>
+        <img src="images/decomposition-example.png" alt="Example of Decomposition - Building a House" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Algorithmic Thinking</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Algorithmic Thinking:</strong> Developing a step-by-step solution to a problem, known as an <span class="red-term">algorithm</span>.</p>
+        </div>
+        <p class="animate-on-scroll">This involves defining a clear, unambiguous sequence of instructions to achieve a specific outcome. Algorithms are the core of computer programs.</p>
+
+        <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-lightbulb"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Describe what is meant by 'computational thinking' and explain how its principles can help solve complex problems. [4 Marks]</p>
+                </div>
+        </div>
+
+        <h3 class="animate-on-scroll">2.1.2 Designing, Creating and Refining Algorithms</h3>
+
+        <h4 class="animate-on-scroll">Inputs, Processes, and Outputs (IPO)</h4>
+        <p class="animate-on-scroll">Every problem or system can be broken down into inputs, the processes applied to those inputs, and the resulting outputs.</p>
+        <ul>
+            <li class="animate-on-scroll"><strong>Inputs:</strong> Data or information that goes into the system.</li>
+            <li class="animate-on-scroll"><strong>Processes:</strong> The steps or operations performed on the inputs.</li>
+            <li class="animate-on-scroll"><strong>Outputs:</strong> The results or information produced by the system.</li>
+        </ul>
+        <img src="images/ipo-diagram.png" alt="Input Process Output Diagram" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Pseudocode</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Pseudocode:</strong> An informal high-level description of the operating principle of a computer program or algorithm.</p>
+        </div>
+        <p class="animate-on-scroll">It uses a mix of natural language and programming constructs, making it easy to understand for humans but not directly executable by computers. It's great for planning.</p>
+        <div class="code-example animate-on-scroll">
+            <pre>
+            RECEIVE name FROM USER
+            DISPLAY "Hello, " + name
+            RECEIVE num1 FROM USER
+            RECEIVE num2 FROM USER
+            SET sum = num1 + num2
+            IF sum > 100 THEN
+                DISPLAY "Sum is very large!"
+            ELSE
+                DISPLAY "Sum is: " + sum
+            END IF
+            </pre>
+        </div>
+
+        <h4 class="animate-on-scroll">Flowcharts</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Flowchart:</strong> A diagram representing a sequence of operations in an algorithm or process.</p>
+        </div>
+        <p class="animate-on-scroll">They use specific shapes to represent different types of actions or decisions, connected by arrows to show the flow of control.</p>
+        <img src="images/flowchart-example.png" alt="Simple Flowchart Example" class="content-image placeholder-image animate-on-scroll">
+
+        <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-pencil-alt"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Draw a flowchart to represent an algorithm that takes a user's age as input. If the age is 18 or over, it outputs "You are an adult". Otherwise, it outputs "You are a minor".</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 J277 Revision Guide. All rights reserved.</p>
+            <p>Inspired by <a href="https://www.csnewbs.com/ocr-gcse" target="_blank">CSNewbs</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

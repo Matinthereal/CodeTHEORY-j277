@@ -345,13 +345,11 @@ body {
 }
 
 /*
-   Removed initial opacity: 0 from animate-on-scroll
-   to ensure text is visible even if JS doesn't run.
-   The JS will still apply the animation if it works.
+   Animate-on-scroll elements on content pages are visible by default.
+   Their animation is triggered by JS adding the 'is-visible' class.
 */
 .animate-on-scroll {
-    /* opacity: 0;  <-- Removed */
-    transform: translateY(20px); /* Still start slightly lower */
+    transform: translateY(20px); /* Start slightly lower */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -360,13 +358,13 @@ body {
     transform: translateY(0);
 }
 
-/* Apply initial opacity: 0 only to elements that are animated on initial load */
-.hero-content.fade-in {
-    opacity: 0; /* Keep initial opacity for hero content fade-in */
-}
-
+/*
+   Specific elements on the homepage that fade in on initial load.
+   They start with opacity: 0 and are animated by JS on DOMContentLoaded.
+*/
+.hero-content.fade-in,
 .revision-guide-character.fade-in-right {
-     opacity: 0; /* Keep initial opacity for character fade-in */
+    opacity: 0; /* Start invisible */
 }
 
 
@@ -379,4 +377,255 @@ body {
 .animated-button::before {
     content: '';
     position: absolute;
-    
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease-out, height 0.4s ease-out;
+    z-index: 0;
+}
+
+.animated-button:hover::before {
+    width: 200%;
+    height: 200%;
+}
+
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        max-height: 300px; /* Adjust based on number of links */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+        text-align: center;
+        min-height: 60vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .revision-guide-character {
+        position: static; /* Stack character below on small screens */
+        margin-top: 40px;
+        max-width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .revision-guide-character .character-image {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+
+/* --- General Content Page Styling (to be reused) --- */
+.content-section {
+    padding: 60px 20px;
+    background-color: var(--white);
+    min-height: 80vh;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.content-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.content-section h3 {
+    font-size: 1.8rem;
+    color: var(--dark-bg);
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.content-section h4 {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.content-section p, .content-section ul, .content-section ol {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.content-section ul, .content-section ol {
+    margin-left: 25px;
+}
+
+.content-section ul li, .content-section ol li {
+    margin-bottom: 10px;
+}
+
+.content-section .definition-box {
+    background-color: #e8f5e9; /* Light green */
+    border-left: 5px solid var(--primary-color);
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+}
+
+.content-section .definition-box strong {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.content-section .code-example {
+    background-color: #263238; /* Dark grey for code */
+    color: #e0e0e0;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Fira Code', 'Cascadia Code', monospace; /* Monospace font for code */
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+
+.content-section .code-example pre {
+    margin: 0;
+}
+
+/* "It's your turn!" section */
+.your-turn-box {
+    background-color: #fffde7; /* Light yellow */
+    border-left: 5px solid var(--accent-color);
+    padding: 25px;
+    margin: 40px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: flex-start;
+}
+
+.your-turn-box .icon {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.your-turn-box h4 {
+    color: var(--dark-bg);
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-left: none;
+    padding-left: 0;
+}
+
+.your-turn-box p {
+    margin-bottom: 0;
+}
+
+/* Image styling within content */
+.content-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 30px auto;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease;
+}
+
+.content-image:hover {
+    transform: scale(1.02);
+}
+
+.placeholder-image {
+    background-color: #ccc; /* Grey background for placeholders */
+    border: 2px dashed #999; /* Dashed border */
+    display: block; /* Ensure it takes up space */
+    object-fit: contain;
+}
+
+/* Highlighted text for "technical terms in red" */
+.red-term {
+    color: #D32F2F; /* A distinct red */
+    font-weight: 600;
+}

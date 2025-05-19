@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming Fundamentals - OCR GCSE Computer Science (J277)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">J277 Revision</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="programming-fundamentals.html">Programming Fundamentals</a></li>
+                <li><a href="robust-programs.html">Robust Programs</a></li>
+                <li><a href="boolean-logic.html">Boolean Logic</a></li>
+                <li><a href="languages-ides.html">Languages & IDEs</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-section container">
+        <h2 class="animate-on-scroll">2.2 Programming Fundamentals</h2>
+
+        <div class="definition-box animate-on-scroll">
+            <p>Here you will revise the following:</p>
+            <ul>
+                <li>Variables, Constants, Data Types</li>
+                <li>Operators</li>
+                <li>Selection (IF, ELIF, ELSE, CASE)</li>
+                <li>Iteration (FOR, WHILE, REPEAT UNTIL)</li>
+                <li>Arrays/Lists</li>
+                <li>Subroutines (Procedures, Functions)</li>
+                <li>String Manipulation</li>
+                <li>File Handling</li>
+            </ul>
+        </div>
+
+        <h3 class="animate-on-scroll">Variables, Constants, and Data Types</h3>
+        <p class="animate-on-scroll">In programming, we need to store and manipulate data. This is done using <span class="red-term">variables</span> and <span class="red-term">constants</span>, which hold values of different <span class="red-term">data types</span>.</p>
+
+        <h4 class="animate-on-scroll">Variables vs. Constants</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Variable:</strong> A named memory location used to store data that can be changed during program execution.</p>
+            <p><strong>Constant:</strong> A named memory location used to store data that cannot be changed during program execution.</p>
+        </div>
+        <img src="images/variables-example.png" alt="Example of Variables and Constants" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Data Types</h4>
+        <p class="animate-on-scroll">Data types define the type of data a variable or constant can hold and the operations that can be performed on it.</p>
+        <div class="definition-box animate-on-scroll">
+            <p>Common Data Types:</p>
+            <ul>
+                <li><span class="red-term">Integer</span>: Whole numbers (e.g., 5, -10).</li>
+                <li><span class="red-term">Real / Float</span>: Numbers with decimal points (e.g., 3.14, -0.5).</li>
+                <li><span class="red-term">Boolean</span>: Represents truth values (True or False).</li>
+                <li><span class="red-term">Character</span>: A single letter, number, or symbol (e.g., 'a', '7', '$').</li>
+                <li><span class="red-term">String</span>: A sequence of characters (e.g., "Hello World").</li>
+            </ul>
+        </div>
+
+        <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-question-circle"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Identify the most appropriate data type for the following pieces of data:</p>
+                <ol>
+                    <li>The number of students in a class.</li>
+                    <li>Whether a light switch is on or off.</li>
+                    <li>The price of an item.</li>
+                    <li>A person's first name.</li>
+                </ol>
+            </div>
+        </div>
+
+        <h3 class="animate-on-scroll">Operators</h3>
+        <p class="animate-on-scroll">Operators are symbols that perform operations on values and variables.</p>
+        <h4 class="animate-on-scroll">Arithmetic Operators</h4>
+        <div class="code-example animate-on-scroll">
+            <pre>
+            +   (Addition)
+            -   (Subtraction)
+            * (Multiplication)
+            /   (Division)
+            %   (Modulo - remainder)
+            //  (Integer Division)
+            </pre>
+        </div>
+        <h4 class="animate-on-scroll">Comparison (Relational) Operators</h4>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            ==  (Equal to)
+            !=  (Not equal to)
+            >   (Greater than)
+            <   (Less than)
+            >=  (Greater than or equal to)
+            <=  (Less than or equal to)
+            </pre>
+        </div>
+        <h4 class="animate-on-scroll">Boolean (Logical) Operators</h4>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            AND
+            OR
+            NOT
+            </pre>
+        </div>
+        <img src="images/operators-diagram.png" alt="Diagram of Operators" class="content-image placeholder-image animate-on-scroll">
+
+
+        <h3 class="animate-on-scroll">Selection (Conditional Statements)</h3>
+        <p class="animate-on-scroll">Selection allows a program to make decisions based on conditions.</p>
+        <h4 class="animate-on-scroll">IF, ELIF, ELSE</h4>
+        <div class="code-example animate-on-scroll">
+            <pre>
+            IF condition1 THEN
+                // Code to execute if condition1 is True
+            ELIF condition2 THEN
+                // Code to execute if condition1 is False AND condition2 is True
+            ELSE
+                // Code to execute if all conditions are False
+            END IF
+            </pre>
+        </div>
+        <img src="images/selection-flowchart.png" alt="Flowchart for IF/ELSE" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">CASE (or SWITCH)</h4>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            CASE OF variable:
+                value1: // Code for value1
+                value2: // Code for value2
+                OTHERWISE: // Code for all other values
+            END CASE
+            </pre>
+        </div>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-code"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Write pseudocode for a program that asks the user for their score (out of 100) and prints "Pass" if the score is 50 or above, and "Fail" otherwise.</p>
+            </div>
+        </div>
+
+        <h3 class="animate-on-scroll">Iteration (Loops)</h3>
+        <p class="animate-on-scroll">Iteration allows a program to repeat a block of code multiple times.</p>
+        <h4 class="animate-on-scroll">FOR Loop</h4>
+        <p class="animate-on-scroll">Used when you know exactly how many times you want to repeat.</p>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            FOR counter FROM start TO end STEP step_size
+                // Code to repeat
+            NEXT counter
+            </pre>
+        </div>
+
+        <h4 class="animate-on-scroll">WHILE Loop</h4>
+        <p class="animate-on-scroll">Repeats as long as a condition is True. The condition is checked *before* each iteration.</p>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            WHILE condition IS TRUE
+                // Code to repeat
+                // Must include something to make the condition eventually False
+            END WHILE
+            </pre>
+        </div>
+
+        <h4 class="animate-on-scroll">REPEAT UNTIL Loop</h4>
+        <p class="animate-on-scroll">Repeats until a condition is True. The condition is checked *after* each iteration, meaning it always runs at least once.</p>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            REPEAT
+                // Code to repeat
+                // Must include something to make the condition eventually True
+            UNTIL condition IS TRUE
+            </pre>
+        </div>
+        <img src="images/iteration-loop.png" alt="Diagram of a Loop" class="content-image placeholder-image animate-on-scroll">
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-redo-alt"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Explain the difference between a WHILE loop and a REPEAT UNTIL loop.</p>
+            </div>
+        </div>
+
+        <h3 class="animate-on-scroll">Arrays / Lists</h3>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Array / List:</strong> A data structure that stores a collection of items, typically of the same data type, in a contiguous block of memory. Each item is accessed using an <span class="red-term">index</span>.</p>
+        </div>
+        <p class="animate-on-scroll">Indices usually start from 0 in most programming languages.</p>
+        <img src="images/array-structure.png" alt="Diagram of an Array/List" class="content-image placeholder-image animate-on-scroll">
+
+        <h3 class="animate-on-scroll">Subroutines (Procedures and Functions)</h3>
+        <p class="animate-on-scroll">Subroutines are named blocks of code that perform a specific task. They help break down programs into smaller, reusable parts.</p>
+        <h4 class="animate-on-scroll">Procedures</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Procedure:</strong> A subroutine that performs a task but does not return a value.</p>
+        </div>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            PROCEDURE DisplayMessage(message)
+                DISPLAY message
+            END PROCEDURE
+
+            // Calling the procedure
+            CALL DisplayMessage("Hello!")
+            </pre>
+        </div>
+
+        <h4 class="animate-on-scroll">Functions</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Function:</strong> A subroutine that performs a task and returns a value.</p>
+        </div>
+         <div class="code-example animate-on-scroll">
+            <pre>
+            FUNCTION AddNumbers(num1, num2)
+                SET result = num1 + num2
+                RETURN result
+            END FUNCTION
+
+            // Calling the function
+            SET total = AddNumbers(5, 3)
+            DISPLAY total // Outputs 8
+            </pre>
+        </div>
+        <img src="images/subroutine-diagram.png" alt="Diagram showing a Subroutine Call" class="content-image placeholder-image animate-on-scroll">
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-chalkboard-teacher"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>What is the key difference between a procedure and a function?</p>
+            </div>
+        </div>
+
+        <h3 class="animate-on-scroll">String Manipulation</h3>
+        <p class="animate-on-scroll">Working with text data (<span class="red-term">strings</span>) involves various operations.</p>
+        <div class="definition-box animate-on-scroll">
+            <p>Common String Operations:</p>
+            <ul>
+                <li><span class="red-term">Concatenation</span>: Joining strings together.</li>
+                <li><span class="red-term">Length</span>: Finding the number of characters in a string.</li>
+                <li><span class="red-term">Substring</span>: Extracting a part of a string.</li>
+                <li><span class="red-term">Converting Case</span>: Changing to uppercase or lowercase.</li>
+            </ul>
+        </div>
+        <img src="images/string-manipulation.png" alt="Image related to String Manipulation" class="content-image placeholder-image animate-on-scroll">
+
+        <h3 class="animate-on-scroll">File Handling</h3>
+        <p class="animate-on-scroll">Programs often need to read data from files or write data to files.</p>
+        <div class="definition-box animate-on-scroll">
+            <p>Basic File Operations:</p>
+            <ul>
+                <li><span class="red-term">Opening a file</span>: Making the file ready for reading or writing.</li>
+                <li><span class="red-term">Reading from a file</span>: Getting data from the file.</li>
+                <li><span class="red-term">Writing to a file</span>: Saving data to the file.</li>
+                <li><span class="red-term">Closing a file</span>: Releasing the file resource.</li>
+            </ul>
+        </div>
+        <img src="images/file-handling-diagram.png" alt="Diagram for File Handling" class="content-image placeholder-image animate-on-scroll">
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 J277 Revision Guide. All rights reserved.</p>
+            <p>Inspired by <a href="https://www.csnewbs.com/ocr-gcse" target="_blank">CSNewbs</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

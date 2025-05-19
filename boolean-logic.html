@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean Logic - OCR GCSE Computer Science (J277)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">J277 Revision</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="programming-fundamentals.html">Programming Fundamentals</a></li>
+                <li><a href="robust-programs.html">Robust Programs</a></li>
+                <li><a href="boolean-logic.html">Boolean Logic</a></li>
+                <li><a href="languages-ides.html">Languages & IDEs</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-section container">
+        <h2 class="animate-on-scroll">2.4 Boolean Logic</h2>
+
+        <div class="definition-box animate-on-scroll">
+            <p>Here you will revise the following:</p>
+            <ul>
+                <li>Logic Gates (AND, OR, NOT, XOR, NAND, NOR)</li>
+                <li>Truth Tables</li>
+                <li>Logic Diagrams</li>
+            </ul>
+        </div>
+
+        <h3 class="animate-on-scroll">Logic Gates</h3>
+        <p class="animate-on-scroll">Logic gates are fundamental building blocks of digital circuits. They perform basic logical operations on one or more binary inputs (0 or 1) and produce a single binary output.</p>
+        <img src="images/boolean-logic-overview.png" alt="Image representing Logic Gates" class="content-image placeholder-image animate-on-scroll">
+
+
+        <h4 class="animate-on-scroll">AND Gate</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>AND Gate:</strong> Outputs 1 only if all inputs are 1.</p>
+        </div>
+        <img src="images/and-gate.png" alt="AND Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+        <h4 class="animate-on-scroll">OR Gate</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>OR Gate:</strong> Outputs 1 if at least one input is 1.</p>
+        </div>
+        <img src="images/or-gate.png" alt="OR Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+        <h4 class="animate-on-scroll">NOT Gate</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>NOT Gate:</strong> Outputs the inverse of the single input (0 if input is 1, 1 if input is 0).</p>
+        </div>
+        <img src="images/not-gate.png" alt="NOT Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+        <h4 class="animate-on-scroll">XOR (Exclusive OR) Gate</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>XOR Gate:</strong> Outputs 1 if the inputs are different.</p>
+        </div>
+        <img src="images/xor-gate.png" alt="XOR Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+        <h4 class="animate-on-scroll">NAND (NOT AND) Gate</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>NAND Gate:</strong> Outputs the inverse of an AND gate (Outputs 0 only if all inputs are 1).</p>
+        </div>
+        <img src="images/nand-gate.png" alt="NAND Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+        <h4 class="animate-on-scroll">NOR (NOT OR) Gate</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>NOR Gate:</strong> Outputs 1 only if all inputs are 0.</p>
+        </div>
+        <img src="images/nor-gate.png" alt="NOR Gate Symbol" class="content-image placeholder-image animate-on-scroll" style="max-width: 150px;">
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-puzzle-piece"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Which logic gate outputs 1 only when both of its inputs are 0?</p>
+            </div>
+        </div>
+
+
+        <h3 class="animate-on-scroll">Truth Tables</h3>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Truth Table:</strong> A table that shows all possible input combinations for a logic circuit or gate and the corresponding output.</p>
+        </div>
+        <p class="animate-on-scroll">Truth tables are used to define the function of a logic gate or to analyze the output of a combination of gates.</p>
+        <img src="images/truth-table-example.png" alt="Example Truth Table" class="content-image placeholder-image animate-on-scroll">
+         <p class="animate-on-scroll">Example Truth Table for an AND gate with inputs A and B:</p>
+         <div class="code-example animate-on-scroll">
+             <pre>
+             A | B | Output
+             --|---|-------
+             0 | 0 | 0
+             0 | 1 | 0
+             1 | 0 | 0
+             1 | 1 | 1
+             </pre>
+         </div>
+
+
+        <h3 class="animate-on-scroll">Logic Diagrams</h3>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Logic Diagram:</strong> A graphical representation of a logic circuit using standard symbols for logic gates.</p>
+        </div>
+        <p class="animate-on-scroll">Logic diagrams show how logic gates are connected together to perform more complex logical operations.</p>
+        <img src="images/logic-diagram-example.png" alt="Example Logic Circuit Diagram" class="content-image placeholder-image animate-on-scroll">
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-draw-polygon"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Draw a logic diagram for the Boolean expression A OR (B AND C).</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 J277 Revision Guide. All rights reserved.</p>
+            <p>Inspired by <a href="https://www.csnewbs.com/ocr-gcse" target="_blank">CSNewbs</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

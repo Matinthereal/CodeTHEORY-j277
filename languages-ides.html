@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Languages & IDEs - OCR GCSE Computer Science (J277)</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">J277 Revision</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="algorithms.html">Algorithms</a></li>
+                <li><a href="programming-fundamentals.html">Programming Fundamentals</a></li>
+                <li><a href="robust-programs.html">Robust Programs</a></li>
+                <li><a href="boolean-logic.html">Boolean Logic</a></li>
+                <li><a href="languages-ides.html">Languages & IDEs</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-section container">
+        <h2 class="animate-on-scroll">2.5 Programming Languages and Integrated Development Environments</h2>
+
+        <div class="definition-box animate-on-scroll">
+            <p>Here you will revise the following:</p>
+            <ul>
+                <li>High-level vs. Low-level Languages</li>
+                <li>Translators (Compilers, Interpreters, Assemblers)</li>
+                <li>Integrated Development Environments (IDEs) functions</li>
+            </ul>
+        </div>
+
+        <h3 class="animate-on-scroll">High-level vs. Low-level Languages</h3>
+        <p class="animate-on-scroll">Programming languages are the tools we use to write instructions for computers. They vary in how close they are to human language versus machine code.</p>
+        <img src="images/languages-ides-overview.png" alt="Image representing Programming Languages and IDEs" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">High-level Languages</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>High-level Language:</strong> A programming language that is closer to human language, easier to read, write, and understand. Each instruction often translates to many machine code instructions.</p>
+        </div>
+        <p class="animate-on-scroll">Examples: Python, Java, C++, Scratch.</p>
+        <p class="animate-on-scroll">Advantages: Easier to learn and use, faster to write code, portable across different computers.</p>
+        <p class="animate-on-scroll">Disadvantages: Requires a translator, less control over hardware, can be less efficient.</p>
+
+        <h4 class="animate-on-scroll">Low-level Languages</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Low-level Language:</strong> A programming language that is closer to machine code, harder for humans to read and write. Includes Machine Code and Assembly Language.</p>
+        </div>
+        <p class="animate-on-scroll">Examples: Machine Code (binary 0s and 1s), Assembly Language.</p>
+        <p class="animate-on-scroll">Advantages: Gives direct control over hardware, can be very efficient.</p>
+        <p class="animate-on-scroll">Disadvantages: Difficult to learn and use, slow to write code, not portable (specific to a type of processor).</p>
+        <img src="images/high-low-level.png" alt="Diagram comparing High and Low-level Languages" class="content-image placeholder-image animate-on-scroll">
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-balance-scale"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Compare and contrast high-level and low-level programming languages. [4 Marks]</p>
+            </div>
+        </div>
+
+
+        <h3 class="animate-on-scroll">Translators</h3>
+        <p class="animate-on-scroll">Computers only understand machine code. <span class="red-term">Translators</span> are programs that convert code written in other languages into machine code.</p>
+        <img src="images/translators-diagram.png" alt="Diagram showing Compiler, Interpreter, Assembler" class="content-image placeholder-image animate-on-scroll">
+
+        <h4 class="animate-on-scroll">Compilers</h4>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Compiler:</strong> Translates the entire high-level program into machine code all at once before execution. Creates an executable file.</p>
+        </div>
+        <p class="animate-on-scroll">Advantages: Execution is fast once compiled, errors are reported after the entire program is checked.</p>
+        <p class="animate-on-scroll">Disadvantages: Compilation can take time, difficult to debug (errors reported all at once).</p>
+
+        <h4 class="animate-on-scroll">Interpreters</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>Interpreter:</strong> Translates and executes the high-level program line by line.</p>
+        </div>
+        <p class="animate-on-scroll">Advantages: Easier to debug (stops at the first error), good for testing and development.</p>
+        <p class="animate-on-scroll">Disadvantages: Execution is slower than compiled code, requires the interpreter to run the program.</p>
+
+        <h4 class="animate-on-scroll">Assemblers</h4>
+         <div class="definition-box animate-on-scroll">
+            <p><strong>Assembler:</strong> Translates Assembly Language into machine code.</p>
+        </div>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-language"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Explain the difference between a compiler and an interpreter. [4 Marks]</p>
+            </div>
+        </div>
+
+
+        <h3 class="animate-on-scroll">Integrated Development Environments (IDEs)</h3>
+        <div class="definition-box animate-on-scroll">
+            <p><strong>Integrated Development Environment (IDE):</strong> A software application that provides comprehensive facilities to computer programmers for software development.</p>
+        </div>
+        <p class="animate-on-scroll">IDEs combine common developer tools into a single graphical user interface (GUI).</p>
+        <img src="images/ide-screenshot.png" alt="Screenshot or illustration of an IDE" class="content-image placeholder-image animate-on-scroll">
+
+        <p class="animate-on-scroll">Key functions of an IDE:</p>
+        <ul>
+            <li class="animate-on-scroll"><span class="red-term">Code Editor</span>: For writing and editing code, often with syntax highlighting.</li>
+            <li class="animate-on-scroll"><span class="red-term">Error Diagnostics</span>: Helps identify and locate errors in the code (syntax and sometimes runtime errors).</li>
+            <li class="animate-on-scroll"><span class="red-term">Run-time Environment</span>: Allows you to run your program directly within the IDE.</li>
+            <li class="animate-on-scroll"><span class="red-term">Translators</span>: Includes built-in compilers or interpreters.</li>
+            <li class="animate-on-scroll"><span class="red-term">Autocompletion / Intellisense</span>: Suggests code as you type, speeding up coding and reducing errors.</li>
+            <li class="animate-on-scroll"><span class="red-term">Breakpoints and Debugging Tools</span>: Allows you to pause program execution at specific points (breakpoints) and inspect variables to help find and fix bugs.</li>
+        </ul>
+
+         <div class="your-turn-box animate-on-scroll">
+            <span class="icon"><i class="fas fa-tools"></i></span>
+            <div>
+                <h4>It's your turn!</h4>
+                <p>Describe what is meant by 'error diagnostics' in an IDE and how it helps a programmer. [2 Marks]</p>
+                <p>Explain two other functions of an IDE, other than error diagnostics. [4 Marks]</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 J277 Revision Guide. All rights reserved.</p>
+            <p>Inspired by <a href="https://www.csnewbs.com/ocr-gcse" target="_blank">CSNewbs</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

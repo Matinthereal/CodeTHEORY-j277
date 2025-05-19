@@ -25,22 +25,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroContent = document.querySelector('.hero-content');
     const revisionCharacter = document.querySelector('.revision-guide-character');
 
+    // Add console logs to check if elements are found
+    console.log('DOMContentLoaded fired.');
+    console.log('Hero Content element found:', heroContent);
+    console.log('Revision Character element found:', revisionCharacter);
+
+
     // Only apply initial opacity and animation if the elements exist (i.e., on index.html)
     // The initial opacity: 0 is now set in CSS for these specific elements
     if (heroContent) {
+        // Use a small timeout to ensure the CSS has been applied before trying to animate
         setTimeout(() => {
             heroContent.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
             heroContent.style.opacity = 1;
             heroContent.style.transform = 'translateY(0)'; // Animate transform as well
-        }, 100); // Small delay to ensure CSS is applied before animation
+             console.log('Hero Content animation applied.');
+        }, 100); // Small delay
+    } else {
+         console.log('Hero Content element not found. Skipping animation.');
     }
 
     if (revisionCharacter) {
+         // Use a small timeout to ensure the CSS has been applied before trying to animate
          setTimeout(() => {
              revisionCharacter.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
              revisionCharacter.style.opacity = 1;
              revisionCharacter.style.transform = 'translateX(0)'; // Animate transform as well
+             console.log('Revision Character animation applied.');
          }, 300); // Slightly delayed
+     } else {
+         console.log('Revision Character element not found. Skipping animation.');
      }
 
 
@@ -73,7 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // If animations or elements are not appearing as expected,
     // open your browser's Developer Tools (usually F12), go to the 'Console' tab,
     // and look for any red error messages. These messages can help identify
-    // issues in the JavaScript code or file loading.
+    // issues in the JavaScript code or file loading. Also check the 'Network' tab
+    // to see if your CSS and JS files are loading correctly (status code 200).
 });
 
 // Animation for mobile nav links (CSS animation, not JS)
